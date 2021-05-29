@@ -17,39 +17,39 @@ console.log(data)
 </script>
 
 <style>
-	.content :global(h2) {
-		font-size: 1.4em;
-		font-weight: 500;
-	}
-
-	.content :global(pre) {
-		background-color: #f9f9f9;
-		box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.05);
-		padding: 0.5em;
-		border-radius: 2px;
-		overflow-x: auto;
-	}
-
-	.content :global(pre) :global(code) {
-		background-color: transparent;
-		padding: 0;
-	}
-
-	.content :global(ul) {
-		line-height: 1.5;
-	}
-
-	.content :global(li) {
-		margin: 0 0 0.5em 0;
-	}
+div#post_item > p > img{
+  max-width : 100%;
+  height : auto;
+}
+div#post_item > hr {
+  height: 1px;
+  background-color: #000;
+  border: none;
+}
+.show_head_wrap{ font-size: 1.4rem; }
 </style>
 
 <svelte:head>
 	<title>{post.title}</title>
 </svelte:head>
-
-<h1>{post.title}</h1>
-
-<div class="content">
-	{@html post.content}
+<div class="container bg-light">
+  <a href="/posts" class="btn btn-light btnx-outline-orange mt-2">Back</a>
+  <hr class="mt-2 mb-2" />
+  <div class="show_head_wrap">
+    <i class="bi bi-house-fill mx-2"></i> >
+      &nbsp;{post.title}
+  </div>
+  <div class="card shadow-sm my-2">
+    <div class="card-body">
+      <h1>{post.title}</h1>
+      Date: {post.created_at}<br />
+      Category : {post.category.name }
+    </div>
+  </div>
+  <div class="card shadow-sm mt-2 mb-4">
+    <div class="card-body">
+      <div id="post_item" >{@html post.content}
+      </div>
+    </div>
+  </div>                       
 </div>

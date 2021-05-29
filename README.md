@@ -6,7 +6,7 @@
 
  date    : 2021/05/27
 
- update  :
+ update  : 2021/05/29 
 
 ***
 ### Summary
@@ -43,6 +43,7 @@ https://cms-kuc-sapper2.netlify.app/
 ***
 ### Blog:
 
+* svelte + sapperで、SSG 静的サイトの出力と netlifyデプロイ
 https://zenn.dev/knaka0209/articles/a91a1ee75aa120
 
 ***

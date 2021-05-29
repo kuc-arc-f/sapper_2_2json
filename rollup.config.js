@@ -12,6 +12,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 const api_key = process.env.API_KEY;
 const my_json_url = process.env.MY_JSON_URL;
+const my_site_name = process.env.MY_SITE_NAME;
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -33,7 +34,8 @@ export default {
 					'process.browser': true,
 					'process.env.NODE_ENV': JSON.stringify(mode),
 					'process.env.API_KEY': JSON.stringify(api_key),
-					'process.env.MY_JSON_URL': JSON.stringify(my_json_url)
+					'process.env.MY_JSON_URL': JSON.stringify(my_json_url),
+					'process.env.MY_SITE_NAME': JSON.stringify(my_site_name)					
 				},
 			}),
 			svelte({
