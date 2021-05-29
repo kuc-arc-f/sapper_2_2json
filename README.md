@@ -38,7 +38,6 @@ yarn export
 
 ***
 ### sample URL
-https://cms-kuc-sapper2.netlify.app/
 
 ***
 ### Blog:
